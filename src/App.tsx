@@ -2,11 +2,12 @@ import {
   Center,
   ChakraProvider,
   Input,
-  Box,
-  Button
+  Box
 } from '@chakra-ui/react'
-import { login } from './services/login';
 import { Header } from './components/Header';
+import { Botao } from './components/Botao';
+
+import { login } from './services/login';
 
 function App() {
   return (
@@ -20,9 +21,7 @@ function App() {
           <Input placeholder="email" />
           <Input placeholder="password" />
           <Center>
-            <Button onClick={login} colorScheme='teal' size='sm' width='100%' marginTop='5px'>
-              Button
-            </Button>
+            <Botao title={'Login'} event={login} />
           </Center>
         </Box>
       </Box>
