@@ -2,31 +2,33 @@ import {
   Card,
   CardHeader,
   CardBody,
-  Flex,
   Input,
-  Stack
+  Stack,
+  Center
 } from "@chakra-ui/react"
-import { Header } from "../Header/Header"
 import { ButtonLogin } from "../ButtonLogin/ButtonLogin"
 import { login } from "../../services/login"
+import { useState } from "react"
 
 
 
 export const CardLogin = () => {
+  const [email, setEmail] = useState<string>('')
+
   return (
-    <Flex minWidth='300px' height='100vh' alignItems='center' justifyContent='center' bg='linear-gradient(to right, #3698D3, #5059A1)' padding='5px'>
-      <Card width='500px'>
-        <CardHeader>
-          <Header />
-        </CardHeader>
-        <CardBody>
-          <Stack>
-            <Input placeholder='Email' type='email' />
-            <Input placeholder='Password' type='password' />
-            <ButtonLogin onClick={login} />
-          </Stack>
-        </CardBody>
-      </Card>
-    </Flex>
+    <Card width='500px'>
+      <CardHeader>
+        <Center>
+          <h1>Faça o login</h1>
+        </Center>
+      </CardHeader>
+      <CardBody>
+        <Stack>
+          <Input placeholder='Email' type='email' value={email} onChange={(event) => setEmail(event.target.value)} />
+          <Input placeholder='Password' type='password' />
+          <ButtonLogin onClick={() => login(email)} />
+        </Stack>
+      </CardBody>
+    </Card>
   )
 }
