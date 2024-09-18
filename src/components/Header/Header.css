@@ -1,3 +1,6 @@
 .header {
-    background-color: orange;
+    background-color: rgb(41, 41, 41);
+    padding: 15px 120px;
+    font-size: 32px;
+    color: antiquewhite;
 }

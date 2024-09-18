@@ -1,3 +1,6 @@
-export const login = (): void => {
-    alert('Bem vinda!')
+export const login = (): any => {
+    return(
+        alert('boas vindas')
+    )
+    
 }
