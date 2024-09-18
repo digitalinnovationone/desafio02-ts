@@ -5,7 +5,7 @@ export const Footer  = () => {
     <>
       <Box color="#fff" bg="#292929" padding="15px">
         <footer>
-          <Center fontSize="12px">
+          <Center display="flex" fontSize="12px">
               © Dio Bank 2024 - Todos os direitos reservados.
           </Center>  
         </footer>

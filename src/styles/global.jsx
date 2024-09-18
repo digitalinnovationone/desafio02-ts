@@ -6,4 +6,9 @@ export const GlobalStyles = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
+    body{
+        background-color:#292929;
+        margin: 0 auto;
+        max-width: 1366px;
+    }
 `
