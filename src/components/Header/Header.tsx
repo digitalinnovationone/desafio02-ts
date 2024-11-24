@@ -1,9 +1,8 @@
-import './Header.css'
+import { Flex, Heading } from '@chakra-ui/react'
+// import './Header.css'
 
 export const Header  = () => {
   return(
-    <div className='header'>
-      Dio Bank
-    </div>
+    <Flex justify={'center'} padding={'0.5em'}><Heading textAlign={'center'}>Dio Bank</Heading></Flex>
   )
 }
